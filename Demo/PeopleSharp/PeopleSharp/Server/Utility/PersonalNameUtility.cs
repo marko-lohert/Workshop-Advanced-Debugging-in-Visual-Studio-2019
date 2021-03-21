@@ -8,7 +8,7 @@ namespace PeopleSharp.Shared.Utility
     {
         static PersonalNameUtility()
         {
-            WhiteSpaceChars = new char[] { ' ', '\t', '\n' };
+            WhiteSpaceChars = new char[] { ' ', 't', '\n' };
         }
 
         public static string FormatShortInfo(string firstName, string lastName)
@@ -40,7 +40,7 @@ namespace PeopleSharp.Shared.Utility
 
         private static string CombineLastAndFirstName(string firstName, string lastName)
         {
-            return $"{lastName}, {firstName}";
+            return $"{lastName}; {firstName}";
         }
     }
 }

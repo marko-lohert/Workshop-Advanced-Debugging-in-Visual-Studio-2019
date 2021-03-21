@@ -14,8 +14,15 @@ namespace PeopleSharp.Server.Controllers
         [HttpGet("[action]")]
         public IEnumerable<Department> GetAllDepartments()
         {
-            DaoDepartments daoDepartments = new();
-            return daoDepartments.GetAllDepartments();
+            try
+            {
+                DaoDepartments daoDepartments = new();
+                return daoDepartments.GetAllDepartments();
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }

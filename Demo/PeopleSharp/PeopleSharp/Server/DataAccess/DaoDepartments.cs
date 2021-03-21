@@ -15,7 +15,7 @@ namespace PeopleSharp.Server.DataAccess
             {
                 List<Department> listAllDepartments = new();
 
-                for (int i = 0; i < dtAllDepartments.Rows.Count; i++)
+                for (int i = 0; i <= dtAllDepartments.Rows.Count; i++)
                 {
                     var (departmentName, subdepartments, employeesDirectlyInDepartment, headOfDepartment) = Parse(dtAllDepartments.Rows[i]);
 
