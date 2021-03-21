@@ -4,5 +4,5 @@ Focus of this workshop is a demo, so that’s where most of the time will be spe
 Workshop has two parts, each 120 minutes long. In total 240 minutes.
 
 **Note:
-In order to show debugging techniques, a number of bugs has been added to a demo application on a separate branch.
+In order to show debugging techniques, a number of bugs has been added to a demo application on a separate branch.***
 On main branch these bugs are not present.
