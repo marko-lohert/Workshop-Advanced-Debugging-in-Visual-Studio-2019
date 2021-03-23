@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleSharp.Client", "Peopl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleSharp.Shared", "PeopleSharp\Shared\PeopleSharp.Shared.csproj", "{BAC4F6A3-4BDA-4FDF-AF9C-9CD021A461AD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{242AE1DA-E878-4F39-A8A0-41BC17DFF9DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleSharp.Shared.Tests", "PeopleSharp\UnitTests\PeopleSharp.Shared.Tests\PeopleSharp.Shared.Tests.csproj", "{9F9F2AB0-84A7-4124-91FC-7F9A15C6604D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleSharp.Server.Tests", "PeopleSharp\UnitTests\PeopleSharp.Server.Tests\PeopleSharp.Server.Tests.csproj", "{FBCC93BF-1DA4-4CCC-BF6A-4039530BB23F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +33,21 @@ Global
 		{BAC4F6A3-4BDA-4FDF-AF9C-9CD021A461AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAC4F6A3-4BDA-4FDF-AF9C-9CD021A461AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAC4F6A3-4BDA-4FDF-AF9C-9CD021A461AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F9F2AB0-84A7-4124-91FC-7F9A15C6604D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F9F2AB0-84A7-4124-91FC-7F9A15C6604D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F9F2AB0-84A7-4124-91FC-7F9A15C6604D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F9F2AB0-84A7-4124-91FC-7F9A15C6604D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBCC93BF-1DA4-4CCC-BF6A-4039530BB23F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBCC93BF-1DA4-4CCC-BF6A-4039530BB23F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBCC93BF-1DA4-4CCC-BF6A-4039530BB23F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBCC93BF-1DA4-4CCC-BF6A-4039530BB23F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9F9F2AB0-84A7-4124-91FC-7F9A15C6604D} = {242AE1DA-E878-4F39-A8A0-41BC17DFF9DF}
+		{FBCC93BF-1DA4-4CCC-BF6A-4039530BB23F} = {242AE1DA-E878-4F39-A8A0-41BC17DFF9DF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {99B37A7B-054D-4C99-8772-8343B53A568A}
