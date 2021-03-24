@@ -117,19 +117,19 @@ namespace PeopleSharp.Server.DataAccess
             DataTable dtMockData = new DataTable("Departments");
 
             DataColumn idColumn = new();
-            idColumn.DataType = System.Type.GetType("System.Int32");
+            idColumn.DataType = typeof(int);
             idColumn.ColumnName = "Id";
             idColumn.AutoIncrement = true;
             dtMockData.Columns.Add(idColumn);
 
             DataColumn departmentNameColumn = new();
-            departmentNameColumn.DataType = System.Type.GetType("System.String");
+            departmentNameColumn.DataType = typeof(string);
             departmentNameColumn.ColumnName = "DepartmentName";
             departmentNameColumn.DefaultValue = DBNull.Value;
             dtMockData.Columns.Add(departmentNameColumn);
 
             DataColumn parentDepartmentIdColumn = new();
-            parentDepartmentIdColumn.DataType = System.Type.GetType("System.Int32");
+            parentDepartmentIdColumn.DataType = typeof(int);
             parentDepartmentIdColumn.ColumnName = "ParentDepartment_Id";
             parentDepartmentIdColumn.AutoIncrement = true;
             dtMockData.Columns.Add(parentDepartmentIdColumn);

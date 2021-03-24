@@ -4,19 +4,19 @@ using System.Text;
 
 namespace PeopleSharp.Shared.Utility
 {
-    public static class PersonalNameUtility
+    public class PersonalNameUtility
     {
-        static PersonalNameUtility()
+        public PersonalNameUtility()
         {
             WhiteSpaceChars = new char[] { ' ', '\t', '\n' };
         }
 
-        public static string FormatShortInfo(string firstName, string lastName)
+        public string FormatShortInfo(string firstName, string lastName)
         {
             return CombineLastAndFirstName(CapitalizeEachWord(firstName), CapitalizeEachWord(lastName));
         }
 
-        public static string CapitalizeEachWord(string inputText)
+        public string CapitalizeEachWord(string inputText)
         {
             Func<string, string> capitalize = (string input) =>
             {
@@ -36,9 +36,9 @@ namespace PeopleSharp.Shared.Utility
             return capitalize(inputText);
         }
 
-        private static char[] WhiteSpaceChars { get; set; }
+        private char[] WhiteSpaceChars { get; set; }
 
-        private static string CombineLastAndFirstName(string firstName, string lastName)
+        private string CombineLastAndFirstName(string firstName, string lastName)
         {
             return $"{lastName}, {firstName}";
         }

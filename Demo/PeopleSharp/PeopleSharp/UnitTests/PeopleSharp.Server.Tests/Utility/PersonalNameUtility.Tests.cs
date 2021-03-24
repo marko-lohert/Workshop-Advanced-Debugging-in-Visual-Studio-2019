@@ -6,6 +6,14 @@ namespace PeopleSharp.Server.Tests
     [TestClass]
     public class PersonalNameUtility_Tests
     {
+        [ClassInitialize]
+        public static void ClassInit(TestContext context)
+        {
+            personalNameUtility = new();
+        }
+
+        private static PersonalNameUtility personalNameUtility;
+
         [TestMethod]
         public void CapitalizeEachWord_First_Last()
         {
@@ -14,7 +22,7 @@ namespace PeopleSharp.Server.Tests
             string expectedOutputTest = "John Doe";
 
             // Act
-            string actualOutputTest = PersonalNameUtility.CapitalizeEachWord(inputText);
+            string actualOutputTest = personalNameUtility.CapitalizeEachWord(inputText);
 
             // Assert
             Assert.AreEqual(expectedOutputTest, actualOutputTest);
@@ -28,7 +36,7 @@ namespace PeopleSharp.Server.Tests
             string expectedOutputTest = "John L. Doe";
 
             // Act
-            string actualOutputTest = PersonalNameUtility.CapitalizeEachWord(inputText);
+            string actualOutputTest = personalNameUtility.CapitalizeEachWord(inputText);
 
             // Assert
             Assert.AreEqual(expectedOutputTest, actualOutputTest);
@@ -42,7 +50,7 @@ namespace PeopleSharp.Server.Tests
             string expectedOutputTest = "John  Doe";
 
             // Act
-            string actualOutputTest = PersonalNameUtility.CapitalizeEachWord(inputText);
+            string actualOutputTest = personalNameUtility.CapitalizeEachWord(inputText);
 
             // Assert
             Assert.AreEqual(expectedOutputTest, actualOutputTest);
@@ -56,7 +64,7 @@ namespace PeopleSharp.Server.Tests
             string expectedOutputTest = string.Empty;
 
             // Act
-            string actualOutputTest = PersonalNameUtility.CapitalizeEachWord(inputText);
+            string actualOutputTest = personalNameUtility.CapitalizeEachWord(inputText);
 
             // Assert
             Assert.AreEqual(expectedOutputTest, actualOutputTest);

@@ -10,7 +10,7 @@ namespace PeopleSharp.Client.Pages
         [CascadingParameter]
         Employee? SelectedEmployee { get; set; }
         bool IsSelectedEmployeeChanged { get; set; }
-        string EmployeeShortInfo { get; set; }
+        string? EmployeeShortInfo { get; set; }
 
         protected override async Task OnParametersSetAsync()
         {
