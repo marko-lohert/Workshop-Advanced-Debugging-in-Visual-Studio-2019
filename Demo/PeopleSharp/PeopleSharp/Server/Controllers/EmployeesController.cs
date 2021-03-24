@@ -23,7 +23,8 @@ namespace PeopleSharp.Server.Controllers
         [HttpGet("[action]")]
         public string GetEmployeeInfo(string firstName, string lastName)
         {
-            return PersonalNameUtility.FormatShortInfo(firstName, lastName);
+            PersonalNameUtility personalNameUtility = new();
+            return personalNameUtility.FormatShortInfo(firstName, lastName);
         }
 
         [AllowAnonymous]
