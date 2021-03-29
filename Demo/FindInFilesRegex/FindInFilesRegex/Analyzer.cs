@@ -69,7 +69,9 @@ namespace FindInFilesRegex
                 MatchCollection matchCollection = regex.Matches(fileContent);
                 file.CountMatches = matchCollection.Count;
             }
-                        
+
+            //throw new Exception("Something went wrong.");
+
             return file;
         }
     }
