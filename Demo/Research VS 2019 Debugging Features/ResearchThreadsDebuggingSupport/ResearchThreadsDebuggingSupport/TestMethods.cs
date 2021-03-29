@@ -5,25 +5,39 @@ namespace Threads
 {
     public class TestMethods
     {
+        private object lockObjectA = new();
+        private object lockObjectB = new();
         private Random Rnd { get; init; } = new();
         private const int minRnd = 100;
         private const int maxRnd = 1000;
 
         public void MethodA()
         {
-            for (int i = 0; i < 10; i++)
+            lock (lockObjectA)
             {
-                Console.WriteLine($"MethodA: i = {i}");
-                Thread.Sleep(Rnd.Next(minRnd, maxRnd));
+                for (int i = 0; i < 10; i++)
+                {
+                    lock (lockObjectB)
+                    {
+                        Console.WriteLine($"MethodA: i = {i}");
+                    }
+                    Thread.Sleep(Rnd.Next(minRnd, maxRnd));
+                }
             }
         }
 
         public void MethodB()
         {
-            for (int i = 0; i < 10; i++)
+            lock (lockObjectB)
             {
-                Console.WriteLine($"MethodB: i = {i}");
-                Thread.Sleep(Rnd.Next(minRnd, maxRnd));
+                for (int i = 0; i < 10; i++)
+                {
+                    lock (lockObjectA)
+                    {
+                        Console.WriteLine($"MethodB: i = {i}");
+                    }
+                    Thread.Sleep(Rnd.Next(minRnd, maxRnd));
+                }
             }
         }
 
@@ -33,7 +47,7 @@ namespace Threads
             {
                 Console.WriteLine($"MethodC: i = {i}");
                 Thread.Sleep(Rnd.Next(minRnd, maxRnd));
-                
+
                 MethodC1();
             }
         }
